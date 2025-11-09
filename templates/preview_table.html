@@ -1,0 +1,35 @@
+<h4>Предпросмотр данных</h4>
+
+<!-- Кнопка скрыть/показать таблицу -->
+<button class="btn btn-outline-primary mb-2" type="button" onclick="togglePreview()">Показать/Скрыть таблицу</button>
+
+<div id="preview-container" class="table-responsive" style="max-height: 400px; overflow: auto; border: 1px solid #dee2e6; border-radius: 6px; padding: 8px;">
+  <table class="table table-bordered table-striped table-sm align-middle" style="table-layout: auto; width: max-content; min-width: 100%;">
+    <thead class="table-light">
+      <tr>
+        {% for col in columns %}
+          <th scope="col">{{ col }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+        <tr>
+          {% for cell in row %}
+            <td>{{ cell }}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+      <tr>
+        <td colspan="{{ columns|length }}" class="text-center text-muted">…</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Скрипт на кнопку скрыть показать таблицу -->
+<script>
+  function togglePreview() {
+    document.getElementById('preview-container').classList.toggle('d-none');
+  }
+</script>
