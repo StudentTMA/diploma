@@ -1,0 +1,38 @@
+
+{% comment %} Карточки для выбора анализа {% endcomment %}
+<div class="col">
+  <div class="card h-100">
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">График по колонке</h5>
+      <p class="card-text text-muted">Построить гистограмму или линейный график по выбранной колонке.</p>
+      <div class="mt-auto">
+        <a href="{% url 'column_chart' %}" class="btn btn-primary w-100">Начать</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100">
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Описательная статистика</h5>
+      <p class="card-text text-muted">Среднее, медиана, стандартное отклонение и т.д.</p>
+      <div class="mt-auto">
+        <a href="{% url 'descriptive_statistics' %}" class="btn btn-primary w-100">Начать</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100">
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Корреляции</h5>
+      <p class="card-text text-muted">Матрица корреляций и тепловая карта.</p>
+      <div class="mt-auto">
+        <a href="{% url 'correlation' %}" class="btn btn-primary w-100">Начать</a>
+      </div>
+    </div>
+  </div>
+</div>
+
